@@ -13,6 +13,7 @@ config.status
 config.sub
 configure
 configure-stamp
+depcomp
 install-sh
 libdshconfig-0.0.20
 libdshconfig-0.0.20.tar.gz
@@ -24,4 +25,5 @@ missing
 mkinstalldirs
 stamp-h
 stamp-h.in
+stamp-h1
 test-dshconfig
