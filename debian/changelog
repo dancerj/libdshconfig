@@ -1,6 +1,7 @@
 libdshconfig (0.20.7-2) unstable; urgency=low
 
-  * Build-depends: add doc++
+  * Build-depends: add doc++ (closes: #165931)
+  Thanks bdale for reporting.
 
  -- Junichi Uekawa <dancer@debian.org>  Wed, 23 Oct 2002 14:22:25 +0900
 
