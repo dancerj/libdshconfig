@@ -4,7 +4,7 @@ bin_PROGRAMS =  \
 INCLUDES = \
 	-I$(top_srcdir)
 
-DSHCONFIG_SONAME = 0:0:0
+DSHCONFIG_SONAME = 1:0:0
 
 lib_LTLIBRARIES = libdshconfig.la
 libdshconfig_la_LDFLAGS = -export-dynamic -version-info $(DSHCONFIG_SONAME)

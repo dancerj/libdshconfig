@@ -41,6 +41,8 @@ open_dshconfig (FILE* file, char delimiter) ;
 
 void
 free_dshconfig(dshconfig* d);
+void
+free_dshconfig_internal(dshconfig_internal * i);
 
 dshconfig_internal *
 dshconfig_splitline(const char * original, char delimiter);

@@ -33,7 +33,6 @@
 static ssize_t getline (char **LINEPTR, size_t *N, FILE *STREAM)
 {
   const int GETLINESIZE = 256;
-  int fgl;
   
   if (!*LINEPTR)
     *LINEPTR= malloc (GETLINESIZE);
@@ -195,6 +194,19 @@ open_dshconfig (FILE* file, char delimiter)
 }
 
 /**
+   Frees up memory for dshconfig_internal
+
+   @Version soname 1 adds this feature
+ */
+void
+free_dshconfig_internal(dshconfig_internal * i)
+{
+  free (i->title);
+  free (i->data);
+  free (i);
+}
+
+/**
    Frees up memory allocated by open_dshconfig.
  */
 void
@@ -207,9 +219,7 @@ free_dshconfig(dshconfig* d)
   for (i=d->config; i; )
     {
       dshconfig_internal * tmp = i->next ;
-      free (i->title);
-      free (i->data);
-      free (i);
+      free_dshconfig_internal(i);
       i=tmp;
     }
   free (d);

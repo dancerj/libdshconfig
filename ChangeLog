@@ -1,3 +1,14 @@
+2002-06-29  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: version 0.20.1
+
+	* libdshconfig.h: add declaration
+
+	* Makefile.am (DSHCONFIG_SONAME): soname 1.
+
+	* libdshconfig.c (getline): remove redundant entry.
+	(free_dshconfig_internal): add new function.
+
 2002-06-25  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: probably require automake 1.6
