@@ -1,3 +1,18 @@
+libdshconfig (0.20.7-1) unstable; urgency=low
+
+  * New upstream version
+  * add documentation in -dev package.
+
+ -- Junichi Uekawa <dancer@debian.org>  Tue, 22 Oct 2002 14:04:00 +0900
+
+libdshconfig (0.20.6-1) unstable; urgency=low
+
+  * New upstream version
+  * standards-version: 3.5.7
+  * install upstream changelog.
+
+ -- Junichi Uekawa <dancer@debian.org>  Mon, 21 Oct 2002 22:57:45 +0900
+
 libdshconfig (0.20.4-1) unstable; urgency=low
 
   * New upstream version

@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-m4_define(LIBDSHCONFIGVERSION,0.20.5.cvs.2)
+m4_define(LIBDSHCONFIGVERSION,0.20.7)
 AC_INIT(libdshconfig, LIBDSHCONFIGVERSION, dancer@debian.org)
 AM_INIT_AUTOMAKE(libdshconfig, LIBDSHCONFIGVERSION)
 AM_CONFIG_HEADER(config.h)

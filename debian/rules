@@ -24,6 +24,7 @@ build-stamp:
 	dh_testdir
 	$(MAKE)
 	$(MAKE) check
+	$(MAKE) doc
 	touch build-stamp
 
 clean:
@@ -42,7 +43,7 @@ install: build
 
 	# Add here commands to install the package into debian/dsh.
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/dsh
-	d-shlibmove --commit --movedev "$(DSH)/usr/include/*" usr/include $(DSH)/usr/lib/libdshconfig.so
+	d-shlibmove --commit --movedevdoc "doc" --movedev "$(DSH)/usr/include/*" usr/include $(DSH)/usr/lib/libdshconfig.so
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -55,7 +56,7 @@ binary-arch: build install
 	dh_installdocs
 	dh_installexamples
 	dh_installmenu
-	dh_installchangelogs
+	dh_installchangelogs ChangeLog
 	dh_link
 	dh_strip
 	dh_makeshlibs -V
