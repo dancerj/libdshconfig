@@ -7,7 +7,7 @@ INCLUDES = \
 DSHCONFIG_SONAME = 1:0:0
 
 lib_LTLIBRARIES = libdshconfig.la
-libdshconfig_la_LDFLAGS = -export-dynamic -version-info $(DSHCONFIG_SONAME)
+libdshconfig_la_LDFLAGS = -export-dynamic -version-info $(DSHCONFIG_SONAME) @vsymldflags@
 include_HEADERS = libdshconfig.h
 test_dshconfig_SOURCES = test-dshconfig.c
 test_dshconfig_LDADD = libdshconfig.la
@@ -26,7 +26,8 @@ EXTRA_DIST= \
 	tests/test-basic.output \
 	tests/test-dshconfig-searchdata.data \
 	$(TESTS) \
-	libdshconfig.spec
+	libdshconfig.spec \
+	dsh.ver
 
 clean-local:
 	-rm -r doc
