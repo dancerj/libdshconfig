@@ -1,8 +1,9 @@
-libdshconfig (0.20.10.cvs.1-1) unstable; urgency=low
+libdshconfig (0.20.11-1) unstable; urgency=low
 
   * New upstream version
+  - supports versioned symbols.
 
- -- Junichi Uekawa <dancer@debian.org>  Fri, 28 May 2004 01:38:48 +0900
+ -- Junichi Uekawa <dancer@debian.org>  Sun,  6 Jun 2004 17:24:45 +0900
 
 libdshconfig (0.20.10-1) unstable; urgency=low
 
