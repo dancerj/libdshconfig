@@ -26,6 +26,6 @@ libdshconfig_la_SOURCES= \
 
 debiandist: ../@PACKAGE@_@VERSION@.orig.tar.gz
 
-decaton: distcheck
-	scp @PACKAGE@-@VERSION@.tar.gz decaton.netfort.gr.jp:public_html/software/downloads
+viper2: distcheck
+	scp @PACKAGE@-@VERSION@.tar.gz viper2.netfort.gr.jp:public_html/software/downloads
 	rm -f @PACKAGE@-@VERSION@.tar.gz
