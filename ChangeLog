@@ -1,3 +1,13 @@
+2002-11-09  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: 0.20.8
+	added a test for sane long-line processing.
+
+	* Makefile.am (TESTS): add the long-line test.
+	requires perl to run.
+
+	* tests/test-longline.sh: heavy-load testing.
+
 2002-10-23  Junichi Uekawa  <dancer@debian.org>
 
 	* debian/control (Build-Depends): update to add doc++

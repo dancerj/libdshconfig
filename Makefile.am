@@ -19,7 +19,8 @@ libdshconfig_la_SOURCES= \
 	libdshconfig.h 
 
 TESTS=	tests/test-basic.sh \
-	tests/test-dshconfig-searchdata.sh
+	tests/test-dshconfig-searchdata.sh \
+	tests/test-longline.sh
 EXTRA_DIST= \
 	tests/test-basic.input \
 	tests/test-basic.output \
