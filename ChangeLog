@@ -1,6 +1,7 @@
 2002-10-03  Junichi Uekawa  <dancer@debian.org>
 
 	* autogen.sh: ordering of autogen fixed.
+	fix autogen.
 
 	* configure.ac: back-support automake 1.5. Debian 3.0r0 
 	only has automake 1.5
