@@ -1,3 +1,8 @@
+2002-12-07  Junichi Uekawa  <dancer@debian.org>
+
+	* autogen.sh: Copied from dlisp, to allow bootstrapping with
+	automake1.7 and autoconf2.5
+
 2002-11-09  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: 0.20.8
