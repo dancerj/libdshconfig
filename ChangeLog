@@ -1,5 +1,7 @@
 2002-05-31  Junichi Uekawa  <dancer@debian.org>
 
+	* autogen.sh: newly add.
+
 	* Makefile.am: add target to create orig.tar.gz
 
 	* debian/changelog: make it non-native package.
