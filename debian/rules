@@ -1,0 +1,76 @@
+#!/usr/bin/make -f
+# Sample debian/rules that uses debhelper.
+# GNU copyright 1997 to 1999 by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# This is the debhelper compatability version to use.
+export DH_COMPAT=3
+PACKAGE_VERSION=`dpkg-parsechangelog | sed -n 's/Version: //p'`
+
+DSH=$(CURDIR)/debian/dsh
+LIBDSHCONFIG=$(CURDIR)/debian/libdshconfig0
+LIBDSHCONFIGDEV=$(CURDIR)/debian/libdshconfig0-dev
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	# Add here commands to configure the package.
+	echo "#define DSH_VERSION \"${PACKAGE_VERSION}\" " > dshversion.h 
+
+	touch configure-stamp
+
+build: configure-stamp build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE)
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	-$(MAKE) clean
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+	# Add here commands to install the package into debian/dsh.
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/dsh
+	install -d $(LIBDSHCONFIG)/usr/lib
+	mv $(DSH)/usr/lib/libdshconfig.so.* $(LIBDSHCONFIG)/usr/lib
+	install -d $(LIBDSHCONFIGDEV)/usr/lib $(LIBDSHCONFIGDEV)/usr/include
+	mv $(DSH)/usr/lib/libdshconfig.* $(LIBDSHCONFIGDEV)/usr/lib
+	mv $(DSH)/usr/include/* $(LIBDSHCONFIGDEV)/usr/include
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installexamples
+	dh_installmenu
+	dh_installman dsh.1
+	dh_installchangelogs
+	dh_link
+	dh_strip
+	dh_makeshlibs -V
+	dh_shlibdeps
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

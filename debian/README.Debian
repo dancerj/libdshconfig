@@ -1,19 +1,11 @@
-dsh for Debian
+libdshconfig for Debian
 --------------
 
-This is a "distributed shell" implementation for Debian/Beowulf project.
-Something that I would have liked, and everyone else have liked,
-but have not (apparently) existed in Debian.
-
-This program supports update-cluster.
-You can manually run update-cluster-regenerate when you install this 
-package, to configure dsh with update-cluster configuration.
-Please see the documentation for update-cluster
-
-This program supports netgroup, which may be provided through 
-the libc, through the NSS, i.e. it is possible to use NIS information
-in dsh.
-
+libdshconfig is a library used in "dsh" project and others 
+for parsing strings of text configuration into a linked list.
+Whether this is really an easy-to-use system is up to
+much debate, but it has been split out from the main code
+to ease code sharing and updates.
 
 The author has a home page at 
   http://www.netfort.gr.jp/~dancer/
@@ -23,4 +15,4 @@ and the primary page for dsh is at
 
 enjoy.
 
- -- Junichi Uekawa <dancer@debian.org>, Mon, 21 Aug 2001 22:54:04 +0900
+ -- Junichi Uekawa <dancer@debian.org>, Sat, 20 Apr 2002
