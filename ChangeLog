@@ -1,3 +1,9 @@
+2002-06-11  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: version 0.0.20.0
+
+	* Makefile.am: update with dmachinemon source for rules of making debian source
+
 2002-06-04  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: AM_MAINTAINER_MODE
