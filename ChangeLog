@@ -1,3 +1,8 @@
+2002-09-30  Junichi Uekawa  <dancer@debian.org>
+
+	* tests/test-basic.sh: -u option to diff is not available on 
+	AIX diff. Do not use it.
+
 2002-09-25  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: 0.20.4 -- added testsuite, and make them run.

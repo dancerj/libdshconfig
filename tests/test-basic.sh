@@ -5,5 +5,5 @@
 set -ex
 
 ./test-dshconfig < ${srcdir}/tests/test-basic.input > tests-basic.o
-diff -u ${srcdir}/tests/test-basic.output tests-basic.o
+diff ${srcdir}/tests/test-basic.output tests-basic.o
 rm -f tests-basic.o
