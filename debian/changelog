@@ -1,3 +1,10 @@
+libdshconfig (0.20.4-1) unstable; urgency=low
+
+  * New upstream version
+  * add a testsuite so that build is verified to be working.
+
+ -- Junichi Uekawa <dancer@debian.org>  Wed, 25 Sep 2002 19:56:33 +0900
+
 libdshconfig (0.20.3-1) unstable; urgency=low
 
   * New upstream version
