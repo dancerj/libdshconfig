@@ -194,7 +194,8 @@ open_dshconfig (FILE* file, char delimiter)
 }
 
 /**
-   Frees up memory for dshconfig_internal
+   Frees up memory for dshconfig_internal.
+   It is allocated by dshconfig_splitline.
 
    @Version soname 1 adds this feature
  */

@@ -2,6 +2,8 @@
 
 	* configure.ac: version 0.20.1
 
+	* libdshconfig.c: add more notes.
+
 	* libdshconfig.h: add declaration
 
 	* Makefile.am (DSHCONFIG_SONAME): soname 1.
