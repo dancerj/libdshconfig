@@ -1,5 +1,7 @@
 2002-05-31  Junichi Uekawa  <dancer@debian.org>
 
+	* Makefile.am: update the make rule to fix the automake
+
 	* debian/rules: unnecessary parts removed.
 
 	* autogen.sh: newly add.

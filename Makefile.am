@@ -16,9 +16,10 @@ libdshconfig_la_SOURCES= \
 	libdshconfig.c \
 	libdshconfig.h 
 
+
 # Make debian pristine-source
 ../@PACKAGE@_@VERSION@.orig.tar.gz: distcheck
-	mv @PACKAGE@-@VERSION@.tar.gz ../@PACKAGE@_@VERSION@.orig.tar.gz
+	if [ ! -f $@ ]; then mv @PACKAGE@-@VERSION@.tar.gz ../@PACKAGE@_@VERSION@.orig.tar.gz; fi
 
 debiandist: ../@PACKAGE@_@VERSION@.orig.tar.gz
 
