@@ -25,7 +25,8 @@ EXTRA_DIST= \
 	tests/test-basic.input \
 	tests/test-basic.output \
 	tests/test-dshconfig-searchdata.data \
-	$(TESTS)
+	$(TESTS) \
+	libdshconfig.spec
 
 clean-local:
 	-rm -r doc

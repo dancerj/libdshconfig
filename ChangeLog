@@ -1,7 +1,15 @@
+2004-05-28  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: 0.20.10.cvs.1
+
+	* libdshconfig.spec: Add from Erik Wasser <ew@iquer.net>
+
+	* Makefile.am (EXTRA_DIST): add libdshconfig.spec
+
 2004-01-06  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: 0.20.10
-
+	
 	* libdshconfig.c: fix from Pere for AIX build failure
 	Note that the changes cause a warning message as follows on most architectures, but it's harmless.
 	  gcc -DHAVE_CONFIG_H -I. -I. -I. -I. -I/home/dancer/local/include/ -O2 -Wall -g -MT libdshconfig.lo -MD -MP -MF .deps/libdshconfig.Tpo -c libdshconfig.c  -fPIC -DPIC -o .libs/libdshconfig.o
