@@ -1,5 +1,13 @@
 2002-04-20  Junichi Uekawa  <dancer@debian.org>
 
+	* AUTHORS: created
+
+	* NEWS: empty content.
+
+	* README: created
+
+	* Makefile.am (libdshconfig_la_LDFLAGS): created
+
 	* split out libdshconfig from dsh source
 	
 2002-03-31  Junichi Uekawa  <dancer@debian.org>
