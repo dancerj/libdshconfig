@@ -3,7 +3,7 @@ libdshconfig (0.0.20) unstable; urgency=low
   * Move libdshconfig out from dsh package.
   * autoconfiscate.
 
- -- Junichi Uekawa <dancer@debian.org>  Sun, 21 Apr 2002 00:01:20 +0900
+ -- Junichi Uekawa <dancer@debian.org>  Wed,  1 May 2002 18:14:43 +0900
 
 dsh (0.0.19) unstable; urgency=low
 
