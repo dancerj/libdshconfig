@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(libdshconfig, 0.0.20, dancer@debian.org)
-AM_INIT_AUTOMAKE(libdshconfig, 0.0.20)
+AC_INIT(libdshconfig, 0.0.20pre, dancer@debian.org)
+AM_INIT_AUTOMAKE(libdshconfig, 0.0.20pre)
 AM_CONFIG_HEADER(config.h)
 
 AC_PROG_LIBTOOL
