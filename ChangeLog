@@ -1,3 +1,7 @@
+2003-07-19  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: 0.20.8.cvs.1
+
 2002-12-07  Junichi Uekawa  <dancer@debian.org>
 
 	* autogen.sh: Copied from dlisp, to allow bootstrapping with
