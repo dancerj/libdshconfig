@@ -1,3 +1,9 @@
+2002-07-24  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: bump up version to 0.20.3
+
+	* Makefile.am: update upload rules from dmachinemon source.
+
 2002-07-23  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: version 0.20.2

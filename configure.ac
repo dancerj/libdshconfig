@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(libdshconfig, 0.20.2, dancer@debian.org)
+AC_INIT(libdshconfig, 0.20.3, dancer@debian.org)
 AM_INIT_AUTOMAKE(1.6)
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE
