@@ -19,7 +19,7 @@ AC_C_CONST
 
 # Checks for library functions.
 AC_FUNC_MALLOC
-AC_CHECK_FUNCS([strchr strdup])
+AC_CHECK_FUNCS([strchr strdup getline])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

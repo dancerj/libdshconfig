@@ -25,6 +25,32 @@
 #include <string.h>
 #include <ctype.h>
 #include "libdshconfig.h"
+#include "config.h"
+
+/* local function defining "getline" */
+#ifndef HAVE_GETLINE
+/* an imcomplete, and wrong implementation of getline */
+static ssize_t getline (char **LINEPTR, size_t *N, FILE *STREAM)
+{
+  const int GETLINESIZE = 256;
+  int fgl;
+  
+  if (!*LINEPTR)
+    *LINEPTR= malloc (GETLINESIZE);
+  if (*N != GETLINESIZE)
+    *LINEPTR = realloc (*LINEPTR, GETLINESIZE);
+  if (!*LINEPTR)
+    {
+      return -1;
+    }
+  if (!fgets (*LINEPTR, GETLINESIZE - 1, STREAM))
+    return -1;
+  
+  *N = strlen (*LINEPTR);
+  return GETLINESIZE;
+  
+}
+#endif
 
 /**
    Function to search member

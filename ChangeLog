@@ -1,5 +1,11 @@
 2002-04-21  Junichi Uekawa  <dancer@debian.org>
 
+	* libdshconfig.c (getline): implementation of getline, just enough
+	  to get some working done. (checking for HAVE_GETLINE)
+	  include config.h.
+
+	* configure.ac: check for getline.
+
 	* debian/rules (binary-arch): remove manpage install, no dsh.1
 
 	* Makefile.am (include_HEADERS): changed entry to include include file.

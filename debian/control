@@ -27,4 +27,5 @@ Description: configuration file parser library for dsh - development
  Includes the necessary files for compiling programs with
  libdshconfig.
  .
- The library supports very simple line-based configuration files.
+ This library supports a very simple line-based configuration file 
+ format.
