@@ -1,6 +1,7 @@
 2002-05-04  Junichi Uekawa  <dancer@debian.org>
 
 	* debian/rules: use d-shlibmove instead.
+	The implementation seems to be working satisfactory. Great.
 
 2002-05-01  Junichi Uekawa  <dancer@debian.org>
 
