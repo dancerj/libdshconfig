@@ -144,7 +144,7 @@ read_oneline (FILE* f, int delimiter)
   /* read one line and return */
   dshconfig_internal * d = NULL;
   char* s = NULL;
-  int size = 0;
+  size_t size = 0;
   char* pos;
   
   while (getline (&s, &size, f) != -1)

@@ -1,3 +1,14 @@
+2002-10-12  Junichi Uekawa  <dancer@debian.org>
+
+	* configure.ac: 0.20.5.cvs.2
+	
+	* libdshconfig.c (read_oneline): use size_t for getline.
+
+	* Makefile.am (clean-local): clean doc.
+	(doc): create doc using doc++
+
+	* configure.ac: check for DOCPP
+
 2002-10-09  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: 0.20.5.cvs.1

@@ -26,6 +26,11 @@ EXTRA_DIST= \
 	tests/test-dshconfig-searchdata.data \
 	$(TESTS)
 
+clean-local:
+	-rm -r doc
+
+doc: ${srcdir}/*.[ch]
+	-@DOCPP@ --dir doc ${srcdir}/*.[ch]
 
 # Make debian pristine-source
 ../@PACKAGE@_@VERSION@.orig.tar.gz: 
