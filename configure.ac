@@ -24,10 +24,12 @@ AC_FUNC_MALLOC
 AC_CHECK_FUNCS([strchr strdup getline])
 
 vsymldflags=
+AC_MSG_CHECKING([version script options])
 AC_ARG_WITH([versioned-symbol],AC_HELP_STRING([--with-versioned-symbol],[Use versioned symbols]),[dnl
 vsymldflags="-Wl,--version-script,dsh.ver -Wl,-O1"
 ])
 AC_SUBST(vsymldflags)
+AC_MSG_RESULT([${vsymldflags}])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

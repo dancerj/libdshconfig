@@ -1,5 +1,9 @@
 2004-05-29  Junichi Uekawa  <dancer@debian.org>
 
+	* configure.ac: add output for version script.
+
+	* dsh.ver: Include hidden symbols.
+
 	* configure.ac: 0.20.10.cvs.2 for versioned script support.
 
 	* debian/rules (configure-stamp): use versioned symbols.
