@@ -1,3 +1,9 @@
+2002-10-07  Junichi Uekawa  <dancer@debian.org>
+
+	* debian/rules: remove unneeded variables.
+
+	* debian/control (Standards-Version): 3.5.7
+
 2002-10-03  Junichi Uekawa  <dancer@debian.org>
 
 	* autogen.sh: ordering of autogen fixed.
