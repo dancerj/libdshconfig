@@ -16,3 +16,13 @@ test_dshconfig_LDADD = libdshconfig.la
 libdshconfig_la_SOURCES= \
 	libdshconfig.c \
 	libdshconfig.h 
+
+# Make debian pristine-source
+../@PACKAGE@_@VERSION@.orig.tar.gz: distcheck
+	mv @PACKAGE@-@VERSION@.tar.gz ../@PACKAGE@_@VERSION@.orig.tar.gz
+
+debiandist: ../@PACKAGE@_@VERSION@.orig.tar.gz
+
+decaton: distcheck
+	scp @PACKAGE@-@VERSION@.tar.gz decaton.netfort.gr.jp:public_html/software/downloads
+	rm -f @PACKAGE@-@VERSION@.tar.gz

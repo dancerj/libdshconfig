@@ -3,6 +3,8 @@
 Makefile
 Makefile.in
 aclocal.m4
+autom4te.cache
+build-stamp
 config.guess
 config.h
 config.h.in
@@ -10,7 +12,10 @@ config.log
 config.status
 config.sub
 configure
+configure-stamp
 install-sh
+libdshconfig-0.0.20
+libdshconfig-0.0.20.tar.gz
 libdshconfig.la
 libdshconfig.lo
 libtool

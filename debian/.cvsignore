@@ -3,4 +3,12 @@ dsh.postinst.debhelper
 dsh.prerm.debhelper
 dsh.substvars
 files
+libdshconfig0
+libdshconfig0-dev
+libdshconfig0-dev.postinst.debhelper
+libdshconfig0-dev.prerm.debhelper
+libdshconfig0-dev.substvars
+libdshconfig0.postinst.debhelper
+libdshconfig0.postrm.debhelper
+libdshconfig0.prerm.debhelper
 libdshconfig0.substvars

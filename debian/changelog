@@ -1,4 +1,4 @@
-libdshconfig (0.0.20) unstable; urgency=low
+libdshconfig (0.0.20-1) unstable; urgency=low
 
   * Move libdshconfig out from dsh package.
   * autoconfiscate.
