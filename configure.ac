@@ -2,6 +2,7 @@
 AC_INIT(libdshconfig, 0.0.20pre, dancer@debian.org)
 AM_INIT_AUTOMAKE(libdshconfig, 0.0.20pre)
 AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE
 
 AC_PROG_LIBTOOL
 
