@@ -1,5 +1,9 @@
 2002-04-21  Junichi Uekawa  <dancer@debian.org>
 
+	* debian/rules (binary-arch): remove manpage install, no dsh.1
+
+	* Makefile.am (include_HEADERS): changed entry to include include file.
+
 	* debian/control (Build-Depends): depends on libtool
 
 2002-04-20  Junichi Uekawa  <dancer@debian.org>
