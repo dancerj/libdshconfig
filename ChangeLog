@@ -1,5 +1,7 @@
 2002-09-25  Junichi Uekawa  <dancer@debian.org>
 
+	* configure.ac: 0.20.4 -- added testsuite, and make them run.
+
 	* tests/test-dshconfig-searchdata.sh (READINGSOURCE): fix this.
 
 	* libdshconfig.c (open_dshconfig): return NULL when given file pointer is NULL.
