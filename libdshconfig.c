@@ -1,6 +1,6 @@
 /*
  *  DSH / dancer's shell or the distributed shell
- *  Copyright (C) 2001, 2002 Junichi Uekawa
+ *  Copyright (C) 2001-2004 Junichi Uekawa
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -26,6 +26,9 @@
 #include <ctype.h>
 #include "libdshconfig.h"
 #include "config.h"
+
+/* declaration for a local function required by autoconf */
+static void * rpl_malloc (size_t n);
 
 /* local function defining "getline" */
 #ifndef HAVE_GETLINE
@@ -65,7 +68,6 @@ dshconfig_searchdata (const dshconfig * d, const char * index )
     }  
   return NULL;
 }
-
 
 /**
    The function used to split a line
@@ -236,3 +238,16 @@ free_dshconfig(dshconfig* d)
   free (d);
 }
 
+
+/**
+ * A GNU-compatible malloc,
+ * Code to work with autoconf AC_FUNC_MALLOC
+ */
+#undef malloc
+static void *
+rpl_malloc (size_t n)
+{
+  if (n == 0)
+    n = 1;
+  return malloc (n);
+}

@@ -1,3 +1,17 @@
+libdshconfig (0.20.10-1) unstable; urgency=low
+
+  * New upstream version
+  - really AIX build fix.
+
+ -- Junichi Uekawa <dancer@debian.org>  Tue,  6 Jan 2004 09:29:22 +0900
+
+libdshconfig (0.20.9-1) unstable; urgency=low
+
+  * New upstream version
+  - AIX build fixes
+
+ -- Junichi Uekawa <dancer@debian.org>  Mon,  5 Jan 2004 07:12:07 +0900
+
 libdshconfig (0.20.8-1) unstable; urgency=low
 
   * New upstream version
