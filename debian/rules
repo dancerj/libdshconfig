@@ -42,11 +42,12 @@ install: build
 
 	# Add here commands to install the package into debian/dsh.
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/dsh
-	install -d $(LIBDSHCONFIG)/usr/lib
-	mv $(DSH)/usr/lib/libdshconfig.so.* $(LIBDSHCONFIG)/usr/lib
-	install -d $(LIBDSHCONFIGDEV)/usr/lib $(LIBDSHCONFIGDEV)/usr/include
-	mv $(DSH)/usr/lib/libdshconfig.* $(LIBDSHCONFIGDEV)/usr/lib
-	mv $(DSH)/usr/include/* $(LIBDSHCONFIGDEV)/usr/include
+	d-shlibmove --movedev "$(DSH)/usr/include/*" usr/include $(DSH)/usr/lib/libdshconfig.so
+	#install -d $(LIBDSHCONFIG)/usr/lib
+	#mv $(DSH)/usr/lib/libdshconfig.so.* $(LIBDSHCONFIG)/usr/lib
+	#install -d $(LIBDSHCONFIGDEV)/usr/lib $(LIBDSHCONFIGDEV)/usr/include
+	#mv $(DSH)/usr/lib/libdshconfig.* $(LIBDSHCONFIGDEV)/usr/lib
+	#mv $(DSH)/usr/include/* $(LIBDSHCONFIGDEV)/usr/include
 
 # Build architecture-independent files here.
 binary-indep: build install
