@@ -69,6 +69,8 @@ dshconfig_searchdata (const dshconfig * d, const char * index )
 
 /**
    The function used to split a line
+
+   @return NULL on failure.
  */
 dshconfig_internal *
 dshconfig_splitline(const char * original, char delimiter)
@@ -77,9 +79,14 @@ dshconfig_splitline(const char * original, char delimiter)
   dshconfig_internal * d = malloc (sizeof (dshconfig_internal));
   char * pos, * i;
   
-  
   if (!d)
-    return 0;
+    return NULL;
+  if (!s)
+    {
+      fprintf(stderr, "Failed to malloc in dshconfig_internal");
+      return NULL;
+    }
+  
   d->next =NULL;
   
   if ((pos = strchr(s, delimiter)) == NULL)	/* if the line has no delimiter, it is an error */
@@ -164,7 +171,8 @@ read_oneline (FILE* f, int delimiter)
 }
 
 /** reads a dsh config file, and load it up in memory 
-    returns NULL when error.
+
+    @return NULL when error.
  */
 dshconfig *
 open_dshconfig (FILE* file, char delimiter) 
@@ -173,6 +181,8 @@ open_dshconfig (FILE* file, char delimiter)
   dshconfig_internal * t, * i ;
   
   if (!d)
+    return NULL;
+  if (!file)
     return NULL;
   
   d->config = NULL;

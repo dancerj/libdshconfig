@@ -1,3 +1,28 @@
+2002-09-25  Junichi Uekawa  <dancer@debian.org>
+
+	* tests/test-dshconfig-searchdata.sh (READINGSOURCE): fix this.
+
+	* libdshconfig.c (open_dshconfig): return NULL when given file pointer is NULL.
+
+	* tests/test-dshconfig-searchdata.c (main): check if open_dshconfig fails with NULL input.
+	It SEGV's currently.
+
+	* Makefile.am (EXTRA_DIST): use a shell script instead.
+	Give up on trying to run a binary program, it is not flexible.
+
+	* libdshconfig.c (dshconfig_splitline): NULL on failure.
+
+	* Makefile.am (test_dshconfig_searchdata_SOURCES) 
+	(test_dshconfig_searchdata_LDADD, check_PROGRAMS): add tests/test-dshconfig-searchdata
+	(TESTS): add tests/test-dshconfig-searchdata
+	(testshell): split out shell scripts
+	(EXTRA_DIST): use testshell for extra dist target.
+
+	* tests/test-basic.sh: create a test.
+
+	* Makefile.am (EXTRA_DIST, TESTS): add tests target for test-basic.
+	(check_PROGRAMS): change to test-dshconfig.
+
 2002-07-24  Junichi Uekawa  <dancer@debian.org>
 
 	* configure.ac: bump up version to 0.20.3

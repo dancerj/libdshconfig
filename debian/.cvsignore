@@ -12,3 +12,9 @@ libdshconfig0.postinst.debhelper
 libdshconfig0.postrm.debhelper
 libdshconfig0.prerm.debhelper
 libdshconfig0.substvars
+libdshconfig1
+libdshconfig1-dev
+libdshconfig1-dev.substvars
+libdshconfig1.postinst.debhelper
+libdshconfig1.postrm.debhelper
+libdshconfig1.substvars
