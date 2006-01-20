@@ -33,7 +33,7 @@ clean-local:
 	-rm -r doc
 
 doc: ${srcdir}/*.[ch]
-	-@DOCPP@ --dir doc ${srcdir}/*.[ch]
+	-@DOXYGEN@ libdshconfig.dox ${srcdir}/*.[ch]
 
 # Make debian pristine-source
 ../@PACKAGE@_@VERSION@.orig.tar.gz: 

@@ -17,6 +17,7 @@ depcomp
 doc
 install-sh
 libdshconfig-*.tar.gz
+libdshconfig.dox
 libdshconfig.la
 libdshconfig.lo
 libtool

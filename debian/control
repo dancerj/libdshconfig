@@ -2,8 +2,8 @@ Source: libdshconfig
 Section: libs
 Priority: optional
 Maintainer: Junichi Uekawa <dancer@debian.org>
-Build-Depends: debhelper (>> 3.0.0), libtool, d-shlibs (>= 0.4), doc++
-Standards-Version: 3.5.7
+Build-Depends: debhelper (>> 4.0.0), libtool, d-shlibs (>= 0.4), doxygen
+Standards-Version: 3.6.2
 
 Package: libdshconfig1
 Architecture: any
@@ -17,7 +17,7 @@ Description: configuration file parser library for dsh - runtime
 
 Package: libdshconfig1-dev
 Architecture: any
-Section: devel
+Section: libdevel
 Depends: libdshconfig1 (= ${Source-Version}), ${devlibs:Depends}
 Provides: libdshconfig-dev
 Conflicts: libdshconfig-dev

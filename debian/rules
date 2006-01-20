@@ -6,11 +6,9 @@
 #export DH_VERBOSE=1
 
 # This is the debhelper compatability version to use.
-export DH_COMPAT=3
+export DH_COMPAT=4
 
 DSH=$(CURDIR)/debian/dsh
-LIBDSHCONFIG=$(CURDIR)/debian/libdshconfig0
-LIBDSHCONFIGDEV=$(CURDIR)/debian/libdshconfig0-dev
 
 configure: configure-stamp
 configure-stamp:
@@ -42,8 +40,8 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/dsh.
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/dsh
-	d-shlibmove --commit --movedevdoc "doc" --movedev "$(DSH)/usr/include/*" usr/include $(DSH)/usr/lib/libdshconfig.so
+	$(MAKE) install DESTDIR=$(DSH)
+	d-shlibmove --commit --movedevdoc "doc/doc" --movedev "$(DSH)/usr/include/*" usr/include $(DSH)/usr/lib/libdshconfig.so
 
 # Build architecture-independent files here.
 binary-indep: build install

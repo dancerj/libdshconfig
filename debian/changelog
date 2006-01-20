@@ -1,3 +1,13 @@
+libdshconfig (0.20.12-1) unstable; urgency=low
+
+  * New upstream version
+  * use doxygen, instead of doc++ (Closes: #307560).
+  * add pbuilder-testsuite
+  * set debhelper compatiblity level to 4
+  * section devel->libdevel
+
+ -- Junichi Uekawa <dancer@debian.org>  Fri, 20 Jan 2006 09:36:34 +0900
+
 libdshconfig (0.20.11-1) unstable; urgency=low
 
   * New upstream version

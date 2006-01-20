@@ -1,3 +1,7 @@
+0.20.12 - 20 Jan 2006
+
+ + use doxygen to generate documentation instead of doc++
+
 0.20.11 - 6 June 2004
 
  + Add versioned symbols support
