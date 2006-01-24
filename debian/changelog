@@ -1,3 +1,9 @@
+libdshconfig (0.20.12-2) UNRELEASED; urgency=low
+
+  * 
+
+ -- Junichi Uekawa <dancer@debian.org>  Tue, 24 Jan 2006 18:29:26 +0900
+
 libdshconfig (0.20.12-1) unstable; urgency=low
 
   * New upstream version
