@@ -3,12 +3,12 @@ Mon, 14 May 2001 22:53:04 +0900.
 
 It was downloaded from http://www.netfort.gr.jp/~dancer/software/dsh.html
 
-Upstream Author(s): 
+Upstream Author: 
   Junichi Uekawa <dancer@debian.org> 
 
 Copyright:
 
-Copyright (c) 2001-2004 Junichi Uekawa
+Copyright (c) 2001-2004,2006 Junichi Uekawa
 
 Licensed under GPL version 2 or later.
 Please see /usr/share/common-licenses/GPL on Debian systems.

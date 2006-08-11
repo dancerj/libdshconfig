@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Junichi Uekawa <dancer@debian.org>
 Build-Depends: debhelper (>> 4.0.0), libtool, d-shlibs (>= 0.4), doxygen
-Standards-Version: 3.6.2
+Standards-Version: 3.7.2
 
 Package: libdshconfig1
 Architecture: any
