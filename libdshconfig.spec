@@ -1,64 +1,77 @@
-%define name	libdshconfig
-%define ver		0.20.9
-%define rel		1
-
-Summary		: Library for parsing dsh-style configuration files.
-Name			: %{name}
-Version		: %{ver}
-Release		: %{rel}
-Copyright	: GPL
-Group			: Applications/Internet
-URL			: http://www.netfort.gr.jp/~dancer/software/downloads/list.cgi
-Source		: %{name}-%{ver}.tar.gz
-BuildRoot	: /var/tmp/%{name}-buildroot
-#Requires		: 
+Summary: 	Library for parsing dsh-style configuration files
+Name: 		libdshconfig
+Version: 	0.20.12
+Release: 	2%{?disttag}
+License: 	GPL
+Group: 		System Environment/Libraries
+URL: 		http://www.netfort.gr.jp/~dancer/software/dsh.html.en
+Source0: 	http://www.netfort.gr.jp/~dancer/software/downloads/%{name}-%{version}.tar.gz
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot-%(%{__id_u} -n)
 
 %package devel
-Summary: Library for parsing dsh-style configuration files.
-Requires: libdshconfig = %{version}-%{release}
-Group: Applications/Internet
+Summary:	Development files for libdshconfig
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+# -----------------------------------------------------------------------------
 
 %description
-Library for parsing dsh-style configuration files.
-Required by dsh and other applications.
+Library for parsing dsh-style configuration files. Required by dsh and
+other applications.
 
 %description devel
-Library for parsing dsh-style configuration files.
-Required by dsh and other applications.
+Development files for libdshconfig
+
+Library for parsing dsh-style configuration files. Required by dsh and
+other applications.
+
+# -----------------------------------------------------------------------------
 
 %prep
 %setup -q
 
+# -----------------------------------------------------------------------------
+
 %build
 %configure
-make
+make %{?_smp_mflags}
+
+# -----------------------------------------------------------------------------
 
 %install
-rm -rf "$RPM_BUILD_ROOT"
-make DESTDIR="$RPM_BUILD_ROOT" install
-mkdir -p $RPM_BUILD_ROOT/usr/share/doc/libdshconfig-%{ver}
-cp -p AUTHORS COPYING ChangeLog INSTALL NEWS README $RPM_BUILD_ROOT/usr/share/doc/libdshconfig-%{ver}
+rm -rf $RPM_BUILD_ROOT
+%makeinstall
+rm -Rf $RPM_BUILD_ROOT%{_libdir}/*.la
+
+# -----------------------------------------------------------------------------
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+# -----------------------------------------------------------------------------
+
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
-%defattr(-,root,root)
-%attr(0755,root,root) /usr/lib/libdshconfig.so.1.0.0
-%attr(0755,root,root) /usr/lib/libdshconfig.so.1
-%attr(0644,root,root) /usr/share/doc/libdshconfig-0.20.9/AUTHORS
-%attr(0644,root,root) /usr/share/doc/libdshconfig-0.20.9/COPYING
-%attr(0644,root,root) /usr/share/doc/libdshconfig-0.20.9/ChangeLog
-%attr(0644,root,root) /usr/share/doc/libdshconfig-0.20.9/INSTALL
-%attr(0644,root,root) /usr/share/doc/libdshconfig-0.20.9/NEWS
-%attr(0644,root,root) /usr/share/doc/libdshconfig-0.20.9/README
+%defattr(-,root,root,-)
+%doc COPYING AUTHORS ChangeLog NEWS README
+%{_libdir}/libdshconfig.so.*
 
 %files devel
-%defattr(-,root,root)
-%attr(0755,root,root) /usr/lib/libdshconfig.a
-%attr(0755,root,root) /usr/lib/libdshconfig.la
-%attr(0755,root,root) /usr/lib/libdshconfig.so
-%attr(0644,root,root) /usr/include/libdshconfig.h
+%defattr(-,root,root,-)
+%{_includedir}/libdshconfig.h
+%{_libdir}/libdshconfig.a
+%{_libdir}/libdshconfig.so
+
+# -----------------------------------------------------------------------------
 
 %changelog
-* Mon May 10 2004 Erik Wasser <ew@iquer.net>
-- Initial spec-file
-- Please don't hurt me.
+* Tue Feb 14 2006 Dams <anvil[AT]livna.org> - 0.20.12-1
+- Updated to 0.20.12
 
+* Wed Jan 26 2005 Dams <anvil[AT]livna.org> 0.20.11-1
+- Updated to 0.20.11
+
+* Thu Jun  3 2004 Dams <anvil[AT]livna.org> 
+- Initial build.
