@@ -1,5 +1,7 @@
 2007-08-15  Junichi Uekawa  <dancer@debian.org>
 
+	* Makefile.am: viper2->aegis.
+
 	* libdshconfig.spec: include contributed spec file.
 
 2006-01-24  Junichi Uekawa  <dancer@debian.org>

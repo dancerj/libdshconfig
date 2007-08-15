@@ -18,7 +18,7 @@ Description: configuration file parser library for dsh - runtime
 Package: libdshconfig1-dev
 Architecture: any
 Section: libdevel
-Depends: libdshconfig1 (= ${Source-Version}), ${devlibs:Depends}
+Depends: libdshconfig1 (= ${binary:Version}), ${devlibs:Depends}
 Provides: libdshconfig-dev
 Conflicts: libdshconfig-dev
 Description: configuration file parser library for dsh - development

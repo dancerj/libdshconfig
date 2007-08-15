@@ -1,3 +1,10 @@
+libdshconfig (0.20.13-1) unstable; urgency=low
+
+  * New upstream version
+  * debian/control: use binary:Version instead of Source-Version
+
+ -- Junichi Uekawa <dancer@debian.org>  Wed, 15 Aug 2007 09:09:11 +0900
+
 libdshconfig (0.20.12-2) unstable; urgency=low
 
   * Standards-Version: 3.7.2
