@@ -4,6 +4,8 @@ Priority: optional
 Maintainer: Junichi Uekawa <dancer@debian.org>
 Build-Depends: debhelper (>> 4.0.0), libtool, d-shlibs (>= 0.4), doxygen
 Standards-Version: 3.7.2
+Vcs-Git: git://git.debian.org/git/users/dancer/libdshconfig.git
+Vcs-Browser: http://git.debian.org/?p=users/dancer/libdshconfig.git
 
 Package: libdshconfig1
 Architecture: any
